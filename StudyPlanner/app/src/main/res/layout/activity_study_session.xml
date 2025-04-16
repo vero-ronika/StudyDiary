@@ -1,0 +1,132 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        android:background="@color/main_default"
+        android:paddingBottom="500dp"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Study Session"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/typeherewindow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Additional Notes"
+        android:textSize="22sp"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/subjectNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="Subject Name"
+        android:textSize="30sp"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/typeherewindow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textSize="24sp"
+        android:textColor="#FF5722"
+        app:layout_constraintTop_toBottomOf="@id/subjectNameTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/gifImageView"/>
+
+    <ImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/timerTextView"
+        app:layout_constraintBottom_toTopOf="@id/buttons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttons"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/bottomnavigationview">
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:layout_margin="5dp"
+            app:cornerRadius="16dp"
+            android:backgroundTint="@color/button_color_default"
+            android:text="Cancel" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:layout_margin="5dp"
+            app:cornerRadius="16dp"
+            android:backgroundTint="@color/button_color_default"
+            android:text="Stop" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:layout_margin="5dp"
+            app:cornerRadius="16dp"
+            android:backgroundTint="@color/second_button_color"
+            android:text="Save" />
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavigationview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_dark"
+        android:layout_margin="10dp"
+        app:menu="@menu/navmenu"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconSize="24dp"
+        app:itemIconTint="@color/white"
+        app:itemBackground="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,164 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corners_white"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/accountsettingsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account settings"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/displaynameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change display name"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/accountsettingsTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextDisplayName"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:textSize="15sp"
+        app:cornerRadius="16dp"
+        android:hint="New Display Name"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_corners"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/displaynameTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/buttonUpdateDisplayName"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="Update Display Name"
+        app:cornerRadius="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"
+        android:backgroundTint="@color/second_button_color"
+        app:layout_constraintTop_toBottomOf="@id/editTextDisplayName"
+        app:layout_constraintStart_toStartOf="@id/editTextDisplayName"
+        app:layout_constraintEnd_toEndOf="@id/editTextDisplayName"/>
+
+    <TextView
+        android:id="@+id/changepasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change password"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/buttonUpdateDisplayName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:textSize="15sp"
+        android:paddingStart="10dp"
+        app:cornerRadius="16dp"
+        android:paddingEnd="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintTop_toBottomOf="@id/changepasswordTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Old Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/editTextNewPassword"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:textSize="15sp"
+        app:cornerRadius="16dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="New Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonUpdatePassword"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="Update Password"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:cornerRadius="16dp"
+        android:textSize="18sp"
+        android:backgroundTint="@color/button_color_default"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="@id/editTextDisplayName"
+        app:layout_constraintEnd_toEndOf="@id/editTextDisplayName"
+        />
+    <Button
+        android:id="@+id/cancel_button"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/secondary_default"
+        android:textColor="@color/buttontext_color_default"
+        app:cornerRadius="16dp"
+        android:text="Cancel"
+        app:layout_constraintTop_toBottomOf="@id/buttonUpdatePassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/logOut"
+        app:layout_constraintWidth_percent="0.45"/>
+    <Button
+        android:id="@+id/logOut"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="Log out"
+        android:layout_marginTop="20dp"
+        app:cornerRadius="16dp"
+        android:textSize="18sp"
+        android:backgroundTint="@color/secondary_default"
+        android:textColor="@color/buttontext_color_default"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintTop_toBottomOf="@id/buttonUpdatePassword"
+        app:layout_constraintStart_toEndOf="@id/cancel_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/editTextNewPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

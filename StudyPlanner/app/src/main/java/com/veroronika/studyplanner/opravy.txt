@@ -1,0 +1,7 @@
+opravit - monthly goals aby sa resetovali pre kazdy mesiac lol a ze nemusi do firebase ukladat;
+
+ale som myslel ze to ide slidovat doprava/dolava jak strany xD;
+
+historia monthly goals
+scroller ked viac reminders/diaries v kalendari
+dd

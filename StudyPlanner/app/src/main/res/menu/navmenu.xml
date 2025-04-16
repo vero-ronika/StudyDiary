@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home_nav"/>
+    <item
+        android:id="@+id/navigation_study"
+        android:icon="@drawable/ic_study"
+        android:title="@string/study_nav"/>
+    <item
+        android:id="@+id/navigation_diary"
+        android:icon="@drawable/ic_diary"
+        android:title="@string/diary_nav"/>
+    <item
+        android:id="@+id/navigation_user"
+        android:icon="@drawable/ic_user"
+        android:title="@string/user_nav"/>
+</menu>

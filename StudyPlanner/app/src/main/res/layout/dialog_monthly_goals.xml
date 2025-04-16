@@ -1,0 +1,294 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corners_white"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/setmonthlygoalsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set monthly goal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/tag_selection_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a Tag"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/setmonthlygoalsTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tag_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tag_selection_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/tag0"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:background="@drawable/tag_lightred"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tag 0"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/tag1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:background="@drawable/tag_lightorange"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tag 1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tag0"/>
+
+        <ImageView
+            android:id="@+id/tag2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:background="@drawable/tag_lightyellow"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tag 2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tag1"/>
+
+        <ImageView
+            android:id="@+id/tag3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:background="@drawable/tag_lightgreen"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tag 3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tag2"/>
+
+        <ImageView
+            android:id="@+id/tag4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:background="@drawable/tag_lightblue"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tag 4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tag3"/>
+
+        <ImageView
+            android:id="@+id/tag5"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/tag_lightpurple"
+            android:clickable="true"
+            android:contentDescription="Tag 5"
+            android:focusable="true"
+            android:padding="10dp"
+            app:layout_constraintStart_toEndOf="@id/tag4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tag6"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:background="@drawable/tag_darkred"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tag 6"
+            app:layout_constraintTop_toBottomOf="@id/tag0"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageView
+            android:id="@+id/tag7"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:background="@drawable/tag_darkorange"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tag 7"
+            app:layout_constraintTop_toBottomOf="@id/tag0"
+            app:layout_constraintStart_toEndOf="@id/tag6"/>
+
+        <ImageView
+            android:id="@+id/tag8"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:background="@drawable/tag_darkyellow"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tag 8"
+            app:layout_constraintTop_toBottomOf="@id/tag0"
+            app:layout_constraintStart_toEndOf="@id/tag7"/>
+
+        <ImageView
+            android:id="@+id/tag9"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:background="@drawable/tag_darkgreen"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tag 9"
+            app:layout_constraintTop_toBottomOf="@id/tag0"
+            app:layout_constraintStart_toEndOf="@id/tag8"/>
+
+        <ImageView
+            android:id="@+id/tag10"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:background="@drawable/tag_darkblue"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tag 10"
+            app:layout_constraintTop_toBottomOf="@id/tag0"
+            app:layout_constraintStart_toEndOf="@id/tag9"/>
+
+        <ImageView
+            android:id="@+id/tag11"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:padding="10dp"
+            android:background="@drawable/tag_darkpurple"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="Tag 11"
+            app:layout_constraintTop_toBottomOf="@id/tag0"
+            app:layout_constraintStart_toEndOf="@id/tag10"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tag_selection_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No tag selected"
+        android:textSize="12sp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tag_grid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/subjectwindow"
+        android:layout_width="315dp"
+        android:layout_height="48dp"
+        android:hint="Type subject's name"
+        android:autofillHints="subjecttopic"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        android:scrollHorizontally="false"
+        android:breakStrategy="simple"
+        android:hyphenationFrequency="full"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintTop_toBottomOf="@id/tag_selection_name"
+        app:layout_constraintStart_toStartOf="@id/tag_grid"
+        app:layout_constraintEnd_toEndOf="@id/tag_grid"/>
+    <EditText
+        android:id="@+id/goalTimeEditText"
+        android:autofillHints=""
+        android:hint="Goal Time (minutes)"
+        android:inputType="number"
+        android:layout_width="315dp"
+        android:layout_height="48dp"
+        android:layout_marginTop = "10dp"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintTop_toBottomOf="@id/subjectwindow"
+        app:layout_constraintStart_toStartOf="@id/tag_grid"
+        app:layout_constraintEnd_toEndOf="@id/tag_grid"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/goalTimeEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:cornerRadius="16dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:textSize="18sp"
+            android:backgroundTint="@color/secondary_default"
+            android:textColor="@color/buttontext_color_default"
+            android:text="Cancel"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/save_button"
+            app:layout_constraintWidth_percent="0.45"/>
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            app:cornerRadius="16dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/second_button_color"
+            android:text="Save"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.45" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

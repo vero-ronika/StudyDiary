@@ -666,10 +666,10 @@ public class  MainActivity extends AppCompatActivity {
                         Date dateReminder = dateFormat.parse(dateReminderStr);
                         if (dateReminder != null) {
                             long dateMillis = dateReminder.getTime();
+                            reminderDetails.add(new Pair<>(dateMillis, new Pair<>(tagIndex, timeReminderStr)));
 
                             if (dateMillis > todayMillis) {
-                                reminderDetails.add(new Pair<>(dateMillis, new Pair<>(tagIndex, timeReminderStr)));
-
+                                
                                 if (dateMillis < closestDate) {
                                     closestDate = dateMillis;
                                     closestSubject = subjectName;
@@ -776,10 +776,9 @@ public class  MainActivity extends AppCompatActivity {
                 Date dateReminder = dateFormat.parse(dateReminderStr);
                 if (dateReminder != null) {
                     long dateMillis = dateReminder.getTime();
+                    reminderDetails.add(new Pair<>(dateMillis, new Pair<>(tagIndexValue, timeReminderStr)));
 
                     if (dateMillis > todayMillis) {
-                        reminderDetails.add(new Pair<>(dateMillis, new Pair<>(tagIndexValue, timeReminderStr)));
-
                         if (dateMillis < closestDate) {
                             closestDate = dateMillis;
                             closestSubject = subjectName;
@@ -861,22 +860,22 @@ public class  MainActivity extends AppCompatActivity {
 
         int lineCount = getLineCount(formattedText, new StringBuilder(), 20);
 
-        // Base height for each view in dp
-        int baseHeaderLayoutHeightDp = 260; // Base height for headerLayout
-        int baseHeaderWindowHeightDp = 200; // Base height for headerWindow
+        
+        int baseHeaderLayoutHeightDp = 260; 
+        int baseHeaderWindowHeightDp = 200; 
 
-        // Add extra height based on line count (10 dp per extra line)
+        
         int additionalHeightDp = 13 * (lineCount - 1);
 
-        // Calculate the total height in dp for both layouts
+        
         int totalHeaderLayoutHeightDp = baseHeaderLayoutHeightDp + additionalHeightDp;
         int totalHeaderWindowHeightDp = baseHeaderWindowHeightDp + additionalHeightDp;
 
-        // Convert dp to pixels
+        
         int newHeaderLayoutHeight = dpToPx(totalHeaderLayoutHeightDp);
         int newHeaderWindowHeight = dpToPx(totalHeaderWindowHeightDp);
 
-        // Update layout parameters with dp-based heights
+        
         ConstraintLayout.LayoutParams layoutParams = (ConstraintLayout.LayoutParams) headerLayout.getLayoutParams();
         layoutParams.height = newHeaderLayoutHeight;
         headerLayout.setLayoutParams(layoutParams);
@@ -885,11 +884,11 @@ public class  MainActivity extends AppCompatActivity {
         windowParams.height = newHeaderWindowHeight;
         headerWindow.setLayoutParams(windowParams);
 
-        // Set the reminder text
+        
         remindermainmenu.setText(formattedText);
     }
 
-    // Helper function to convert dp to px
+    
     private int dpToPx(int dp) {
         float density = getResources().getDisplayMetrics().density;
         return (int) (dp * density);
